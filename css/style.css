@@ -1,5 +1,10 @@
 body {
-  font-size: 14px;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #202428;
+  line-height: 1.6;
 }
 
 html {
@@ -21,9 +26,111 @@ img {
 }
 
 .container {
-  max-width: 1250px;
+  max-width: 1300px;
   margin: 0 auto;
   width: 90%;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.header {
+  background-image: url("https://i.postimg.cc/3rSh6S3D/wallpaper-rick-and-morty.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 600px;
+}
+.header__background {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 600px;
+}
+.header__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 600px;
+  align-content: space-between;
+}
+.header__grid__nav {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.header__grid__nav__logo {
+  margin: auto;
+}
+.header__grid__nav__menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.header__grid__nav__menu a {
+  color: white;
+}
+.header__grid__text {
+  margin-bottom: 5rem;
+}
+.header__grid__text div {
+  display: flex;
+  flex-direction: column;
+}
+.header__grid__text div hr {
+  width: 350px;
+  margin-left: 0;
+  margin-bottom: 2rem;
+}
+.header__grid__text div p {
+  max-width: 800px;
+  margin-bottom: 1rem;
+}
+.header__grid__text div a {
+  color: white;
+  background-color: black;
+  margin: auto;
+  margin-left: 0;
+  padding: 1rem;
+}
+
+.main__cards__text {
+  color: white;
+  padding-bottom: 2rem;
+}
+.main__cards__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.main__cards__grid .card {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: auto;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+.card:hover h3 {
+  color: #12b0c9;
+}
+
+@media (min-width: 768px) {
+  .header__grid__nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__grid__nav__logo {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

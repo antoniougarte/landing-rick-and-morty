@@ -1,1 +1,112 @@
 @use 'reset';
+@use 'card';
+
+.header{
+  background-image: url('https://i.postimg.cc/3rSh6S3D/wallpaper-rick-and-morty.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color:white;
+  height: 600px;
+  &__background{
+    background-color: rgba(0,0,0,0.7);
+    height: 600px;
+  }
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 600px;
+    align-content: space-between;
+    &__nav{
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+      &__logo{
+        margin: auto;
+      }
+      &__menu{
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        & a{
+          color:white;
+        }
+      }
+    }
+    &__text{
+      margin-bottom: 5rem;
+      & div{
+        display: flex;
+        flex-direction: column;
+        & hr{
+          width: 350px;
+          margin-left: 0;
+          margin-bottom: 2rem;
+        }
+        & p{
+          max-width: 800px;
+          margin-bottom: 1rem;
+        }
+        & a{
+          color:white;
+          background-color: black;
+          margin: auto;
+          margin-left: 0;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+.main{
+  &__cards{
+    &__text{
+      color:white;
+      padding-bottom: 2rem;
+    }
+    &__grid{
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      & .card{
+        background-color: black;
+        color:white;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 5px;
+        padding: .5rem;
+        margin: auto;
+      }
+    }
+  }
+}
+.card:hover{
+  cursor: pointer;
+  & h3{
+    color:#12b0c9;
+  }
+}
+
+@media (min-width: 768px) {
+  .header{
+    &__grid{
+      &__nav{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      &__logo{
+        margin:0
+      }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+ 
+}
