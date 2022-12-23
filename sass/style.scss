@@ -28,10 +28,16 @@
       }
       &__menu{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         gap: 3rem;
         & a{
           color:white;
+          font-weight: bolder;
+          text-shadow: 20px 15px 7px #0093a9;
+          &:hover{
+            color:#0093a9;
+            transform: scale(1.2);
+          }
         }
       }
     }
@@ -69,27 +75,42 @@
     &__grid{
       display: grid;
       gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       & .card{
-        background-color: black;
-        color:white;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        border-radius: 5px;
-        padding: .5rem;
+        background-color: #e0e0e0;
         margin: auto;
+        width: 250px;
+        height: 420px;
+        padding: 1rem;
+        border-radius: 10px;
+        &:hover{
+          cursor: pointer;
+          & h3{
+            color:#0093a9;
+          }
+        }
+        &__text{
+          padding-top: .5rem;
+          & span{
+            font-weight: bold ;
+          }
+          & h3{
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
       }
     }
   }
 }
-.card:hover{
-  cursor: pointer;
-  & h3{
-    color:#12b0c9;
-  }
+.footer{
+  background-color:#0093a9;
+  height: 50px;
+  color:white;
+  text-align: center;
+  font-size: .8rem;
+  padding-top: 20px;
 }
-
 @media (min-width: 768px) {
   .header{
     &__grid{

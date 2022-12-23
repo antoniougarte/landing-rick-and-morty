@@ -1,9 +1,9 @@
 'use strict';
 
-import foods from "./modules/card.js";
+import card from "./modules/card.js";
 
 const documentReady = () => {
-  foods();
+  generateCards();
 };
 
 document.addEventListener('DOMContentLoaded', documentReady);
